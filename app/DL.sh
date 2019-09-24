@@ -18,11 +18,11 @@ if [ $qualite = "soustitre" ]; then
 fi
 
 if [ $qualite = "720p" ] || [ $qualite = "720p_1080p" ]; then
-   for i in {1..1000}; do "youtube-dl -f "[height="720"]" -o "$MP4_DIR/%(title)s"$suffixe720".%(ext)s" $AUTH $commande;" && break || sleep 15; done 
+   youtube-dl -f "[height="720"]" -o "$MP4_DIR/%(title)s"$suffixe720".%(ext)s" $AUTH $commande;
 fi
 
 if [ $qualite = "1080p" ] || [ $qualite = "720p_1080p"  ]; then
-   for i in {1..1000}; do "youtube-dl -o "$MP4_DIR/%(title)s"$suffixe1080".%(ext)s" $AUTH $commande;" && break || sleep 15; done 
+   youtube-dl -o "$MP4_DIR/%(title)s"$suffixe1080".%(ext)s" $AUTH $commande;
 fi
 
 for MP4 in "$MP4_DIR"/*.mp4 ; do

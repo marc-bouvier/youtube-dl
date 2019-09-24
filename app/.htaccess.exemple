@@ -1,0 +1,8 @@
+#AuthType Basic
+#AuthName "Code d'acces"
+#AuthUserFile /app/.htpass
+#Require valid-user
+
+
+#######   Génerez un identifiant et pass ici https://www.htaccesstools.com/htpasswd-generator   #######
+#######   et copiez le resultat dans le fichier .htpass   #######

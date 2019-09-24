@@ -1,0 +1,8 @@
+youtube:
+     build: .
+    # image: nunurs/youtube:1.0
+     dockerfile: ./1804/Dockerfile
+     ports:
+      - "8080:80"
+#  volumes:
+ #   - /testtt:/app

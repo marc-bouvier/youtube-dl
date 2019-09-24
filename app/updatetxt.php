@@ -142,10 +142,10 @@ header('Location:'."index.php");
    echo exec("rm -r $mp4/*.ass 2>&1", $output);
    header('Location:'."index.php");
 } elseif (isset($_POST['Kill'])) { //Forcer la fermeture des processus
-   shell_exec("pkill -f DL");
-   shell_exec("pkill -f youtube-dl");
-   shell_exec("pkill -f ffmpeg");
-   shell_exec("pkill -f mkvmerge");
+   shell_exec("pkill DL");
+   shell_exec("pkill youtube-dl");
+   shell_exec("pkill ffmpeg");
+   shell_exec("pkill mkvmerge");
 
    header('Location:'."index.php");
 } elseif (isset($_POST['save'])) {

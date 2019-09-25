@@ -322,6 +322,7 @@ header('Location:'."index.php");
    header('Location:'."config.php");
 } elseif (isset($_POST['vidercache'])) {
    fclose(ftruncate(fopen('progress.txt', 'r+'), 0));
+   fclose(ftruncate(fopen('lien.txt', 'r+'), 0));
    header('Location:'."index.php");
 } elseif (isset($_POST['reset'])) {
    exec("cp ". __DIR__ . "/crunchbackup.conf " . __DIR__ . "/crunch.conf");

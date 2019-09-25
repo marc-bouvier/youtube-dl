@@ -23,7 +23,7 @@ $mp4 = substr($mp4longnom, 8);
 				<center><textarea name='textarea' cols="100" rows="10"><?php $file='lien.txt';
 				$contenu=file_get_contents($file);
 				echo $contenu; ?></textarea></center>
-				<pre id="progress" style="overflow-y:scroll;max-height:10em;overflow-x"></pre>
+				<pre id="progress" style="overflow-y:scroll;min-height:10em;max-height:10em;overflow-x:hidden"></pre>
 					<div class="row">
 					<div class="col-sm-2">
 						  <div class="form-group">

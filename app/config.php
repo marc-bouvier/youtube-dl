@@ -189,5 +189,5 @@ if ( $mdp == "savemp4=0" ) {
 </script>
 
 <?php
-	include_once("/dep/foot.php");
+	include_once("./dep/foot.php");
 ?>

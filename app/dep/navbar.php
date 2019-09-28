@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">CrunchyRIP</a>
+          <a class="navbar-brand" href="./../">CrunchyRIP</a>
         </div>
       </div>
     </div>

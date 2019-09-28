@@ -10,13 +10,13 @@ define("ROOT",$root);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="/favicon.ico">
 
     <title>CrunchyRIP</title>
 
         <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="<?php echo ROOT; ?>dep/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo ROOT; ?>dep/css/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php echo ROOT; ?>./css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo ROOT; ?>./css/jquery.fancybox.css" type="text/css" media="screen" />
     <style>
 
 	.commands-table th{

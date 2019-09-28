@@ -140,5 +140,5 @@ $mp4 = substr($mp4longnom, 8);
 </script>
 
 <?php
-	include_once("/dep/foot.php");
+	include_once("./dep/foot.php");
 ?>

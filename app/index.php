@@ -100,7 +100,7 @@ $mp4 = substr($mp4longnom, 8);
 			</div>
 			<div class="row"  style="margin-top:1rem">
 				<div class="col-sm-4 col-sm-offset-4" style="padding:0.1rem">
-					<input type="submit" name="Kill" value="Arrêter le téléchargement en cours" onclick="return confirm('Veux-tu vraiment arreter ?')" class=" btn" style="width:100%"/>
+					<input type="submit" name="Kill" value="Arrêter le téléchargement en cours" onclick="return confirm('Veux-tu vraiment arrêter le téléchargement en cours ?')" class=" btn" style="width:100%"/>
 				</div>
 			</div>
 

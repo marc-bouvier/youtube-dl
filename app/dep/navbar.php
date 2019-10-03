@@ -1,5 +1,5 @@
 <!-- Fixed navbar -->
-<?php include_once("CONFIG.php");?>
+<?php include_once("CONFIG.php"); include_once("nav_links");?>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -11,5 +11,6 @@
           </button>
           <a class="navbar-brand" href="./../">CrunchyRIP</a>
         </div>
+        <?php format_all_navigation_links(); ?>
       </div>
     </div>

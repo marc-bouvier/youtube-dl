@@ -92,18 +92,15 @@ $mp4 = substr($mp4longnom, 8);
 			</div>
 			<div class="row"  style="margin-top:1rem">
 				<div class="col-sm-4 col-sm-offset-2"  style="padding:0.1rem">
-					<input type="submit" name="Supprimerfichiermkv" value="Supprimer les Fichiers MKV"
-					class=" btn btn-danger" style="width:100%"/>
+					<input name="Supprimerfichiermkv" class=" btn btn-danger" style="width:100%" onclick="return confirm('Veux-tu vraiment effacer les MKV ?')" type="submit" value="Supprimer les Fichiers MKV">
 				</div>
 				<div class="col-sm-4" style="padding:0.1rem">
-					<input type="submit" name="Supprimerfichiermp4"value="Supprimer les Fichiers MP4 et ASS"
-					class=" btn btn-danger" style="width:100%"/>
+					<input name="Supprimerfichiermp4" class=" btn btn-danger" style="width:100%" onclick="return confirm('Veux-tu vraiment effacer les MP4 ?')" type="submit"  value="Supprimer les Fichiers MP4 et ASS">
 				</div>
 			</div>
 			<div class="row"  style="margin-top:1rem">
 				<div class="col-sm-4 col-sm-offset-4" style="padding:0.1rem">
-					<input type="submit" name="Kill" value="Arrêter le téléchargement en cours"
-					class=" btn" style="width:100%"/>
+					<input type="submit" name="Kill" value="Arrêter le téléchargement en cours" onclick="return confirm('Veux-tu vraiment arreter ?')" class=" btn" style="width:100%"/>
 				</div>
 			</div>
 

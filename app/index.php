@@ -105,7 +105,7 @@ $mp4 = substr($mp4longnom, 8);
 			</div>
 
 			<div class="row"  style="margin-top:1rem">
-				<form method="POST" action="./config.php">
+				<form method="POST" action="./configuration.php">
 					<div class="col-sm-4 col-sm-offset-4" style="padding:0.1rem">
 						<input type="submit" name="config" value="Configuration"
 						class=" btn btn-success" style="width:100%" />

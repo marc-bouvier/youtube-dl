@@ -9,7 +9,7 @@ function navigation_links(){
 
 function format_navigation_link($navigation_link){
   ?>
-    <li><a href="<?=$navigation_link[1]?>"><?=$navigation_link[01]?></a></li>
+    <li><a href="<?=$navigation_link[1]?>"><?=$navigation_link[0]?></a></li>
   <?php
 }
 

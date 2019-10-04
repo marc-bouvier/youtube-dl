@@ -162,7 +162,7 @@ header('Location:'."index.php");
 
       $data = array_map('replace_a_line',$data);
       file_put_contents('crunch.conf', implode('', $data));
-      header('Location:'."config.php");
+      header('Location:'."configuration.php");
    } else {
       $data = file('crunch.conf'); // reads an array of lines
 
@@ -176,10 +176,10 @@ header('Location:'."index.php");
 
       $data = array_map('replace_a_line',$data);
       file_put_contents('crunch.conf', implode('', $data));
-      header('Location:'."config.php");
+      header('Location:'."configuration.php");
    }
 } elseif (isset($_POST['config'])) {
-   header('Location:'."config.php");
+   header('Location:'."configuration.php");
 } elseif (isset($_POST['register'])) {
    $data = file('crunch.conf'); // reads an array of lines
 
@@ -217,7 +217,7 @@ header('Location:'."index.php");
 
    $data = array_map('replace_a_line3',$data);
    file_put_contents('crunch.conf', implode('', $data));
-   header('Location:'."config.php");
+   header('Location:'."configuration.php");
 } elseif (isset($_POST['envoicookies'])) {
    $data = file('crunch.conf'); // reads an array of lines
 
@@ -231,7 +231,7 @@ header('Location:'."index.php");
 
    $data = array_map('replace_a_line',$data);
    file_put_contents('crunch.conf', implode('', $data));
-   header('Location:'."config.php");
+   header('Location:'."configuration.php");
 } elseif (isset($_POST['accueil'])) {
    header('Location:'."/index.php");
 } elseif (isset($_POST['validercommande'])) {
@@ -319,14 +319,14 @@ header('Location:'."index.php");
    $data = array_map('replace_a_line11',$data);
    file_put_contents('crunch.conf', implode('', $data));
 
-   header('Location:'."config.php");
+   header('Location:'."configuration.php");
 } elseif (isset($_POST['vidercache'])) {
    fclose(ftruncate(fopen('progress.txt', 'r+'), 0));
    fclose(ftruncate(fopen('lien.txt', 'r+'), 0));
    header('Location:'."index.php");
 } elseif (isset($_POST['reset'])) {
    exec("cp ". __DIR__ . "/crunchbackup.conf " . __DIR__ . "/crunch.conf");
-   header('Location:'."config.php");
+   header('Location:'."configuration.php");
 }
 
 

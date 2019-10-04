@@ -1,5 +1,5 @@
 <?php
-
+include_once("../CONFIG.php");
 function navigation_links(){
   return array
   (

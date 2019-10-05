@@ -1,5 +1,5 @@
 <?php
-    include_once("dep/CONFIG.php");
+    include_once("CONFIG.php");
 	$lienCourant="index";
 	include_once("dep/head.php");
 	include_once("dep/navbar.php");

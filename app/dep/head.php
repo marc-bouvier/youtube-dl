@@ -15,8 +15,8 @@ define("ROOT",$root);
     <title>CrunchyRIP</title>
 
         <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="<?php echo ROOT; ?>./css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo ROOT; ?>./css/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php echo ROOT; ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo ROOT; ?>css/jquery.fancybox.css" type="text/css" media="screen" />
     <style>
 
 	.commands-table th{

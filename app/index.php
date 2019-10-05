@@ -1,8 +1,8 @@
 <?php
-    include_once("./dep/CONFIG.php");
+    include_once("dep/CONFIG.php");
 	$lienCourant="index";
-	include_once("./dep/head.php");
-	include_once("./dep/navbar.php");
+	include_once("dep/head.php");
+	include_once("dep/navbar.php");
 
 //variable générale
 $monfichier = file('crunch.conf');
@@ -137,5 +137,5 @@ $mp4 = substr($mp4longnom, 8);
 </script>
 
 <?php
-	include_once("./dep/foot.php");
+	include_once("dep/foot.php");
 ?>

@@ -131,7 +131,7 @@ header('Location:'."index.php");
    exec(__DIR__ ."/DL.sh 2>&1 >progress.txt &");
    header('Location:'."index.php");
 } elseif (isset($_POST['majYoutubeDL'])) { // Mise à jour de Youtube-dl
-   echo exec("pip install --upgrade youtube_dl 2>&1 >progress.txt &");
+   echo exec("sudo pip install --upgrade youtube_dl 2>&1 >progress.txt &");
    header('Location:'."index.php");
 } elseif (isset($_POST['Supprimerfichiermkv'])) { //Supprimer les fichiers MKV
    echo exec("rm -r $mkv/*.mkv 2>&1",$output);

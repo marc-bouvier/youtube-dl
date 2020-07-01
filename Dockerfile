@@ -24,7 +24,8 @@ RUN groupmod -g ${USER_GID} staff
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y update && \
 apt-get -y install software-properties-common && \
-add-apt-repository -y ppa:ondrej/php && \
+add-apt-repository -y -r ppa:ondrej/php && \
+apt-get update -q && \
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C && \
   apt-get -y update && \
   apt-get -y upgrade && \

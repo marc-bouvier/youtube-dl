@@ -25,7 +25,7 @@ RUN add-apt-repository -y ppa:ondrej/php && \
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C && \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get -y install supervisor sudo wget git apache2 php-xdebug libapache2-mod-php php-mysql pwgen php-apcu php7.1-mcrypt php-gd php-xml php-mbstring php-gettext zip unzip php-zip curl php-curl python3-pip python3.8-venv ffmpeg mkvtoolnix aria2 && \
+  apt-get -y install supervisor sudo wget git apache2 php-xdebug libapache2-mod-php php-mysql pwgen php-apcu php7.1-mcrypt php-gd php-xml php-mbstring php-gettext zip unzip php-zip curl php-curl python3.8-venv python3-pip ffmpeg mkvtoolnix aria2 && \
   apt-get -y autoremove && \
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
@@ -51,8 +51,8 @@ RUN chmod 755 /*.sh
 ADD supporting_files/supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 
 # Set PHP timezones de Europe/Paris
-RUN sed -i "s/;date.timezone =/date.timezone = Europe\/Paris/g" /etc/php/7.3/apache2/php.ini
-RUN sed -i "s/;date.timezone =/date.timezone = Europe\/Paris/g" /etc/php/7.3/cli/php.ini
+RUN sed -i "s/;date.timezone =/date.timezone = Europe\/Paris/g" /etc/php/7.4/apache2/php.ini
+RUN sed -i "s/;date.timezone =/date.timezone = Europe\/Paris/g" /etc/php/7.4/cli/php.ini
 
 # Add composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \

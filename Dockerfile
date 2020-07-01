@@ -32,11 +32,7 @@ apt-get update -q && \
   apt-get -y install supervisor sudo wget git apache2 php-xdebug libapache2-mod-php php-mysql pwgen php-apcu php-gd php-xml php7.3-dev php-mbstring php-gettext zip unzip php-zip curl php-curl python3-pip ffmpeg mkvtoolnix aria2 && \
   apt-get -y autoremove && \
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
-RUN apt-get update -y && \
-    apt-get install -y libmcrypt-dev && \
-    pecl install mcrypt-1.0.2 && \
-    docker-php-ext-install mcrypt && \
-    docker-php-ext-enable mcrypt
+
     
 #Installation de PIP
 RUN cd /tmp
@@ -89,7 +85,12 @@ ENV PHP_POST_MAX_SIZE 50M
 ENV VIRTUAL_HOST domain.lan
 RUN echo nameserver 8.8.8.8 > /etc/resolv.conf
 
-
+RUN apt-get update -y && \
+    apt-get install -y libmcrypt-dev && \
+    pecl install mcrypt-1.0.2 && \
+    docker-php-ext-enable mcrypt
+    
+    
 # Add volumes for the app
 VOLUME  ["/DL", "/pass" ]
 

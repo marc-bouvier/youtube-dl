@@ -56,8 +56,8 @@ RUN chmod 755 /*.sh
 ADD supporting_files/supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 
 # Set PHP timezones de Europe/Paris
-#RUN sed -i "s/;date.timezone =/date.timezone = Europe\/Paris/g" /etc/php/7.4/apache2/php.ini
-#RUN sed -i "s/;date.timezone =/date.timezone = Europe\/Paris/g" /etc/php/7.4/cli/php.ini
+RUN sed -i "s/;date.timezone =/date.timezone = Europe\/Paris/g" /etc/php/7.3/apache2/php.ini
+RUN sed -i "s/;date.timezone =/date.timezone = Europe\/Paris/g" /etc/php/7.3/cli/php.ini
 
 # Add composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \

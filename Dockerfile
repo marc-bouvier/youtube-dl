@@ -31,8 +31,10 @@ apt-get update -q && \
   apt-get -y upgrade && \
   apt-get -y install supervisor sudo wget git apache2 php-xdebug libmcrypt-dev libapache2-mod-php php-mysql pwgen php-apcu php-gd php-xml php7.3-dev php-mbstring php-gettext zip unzip php-zip curl php-curl python3-pip ffmpeg mkvtoolnix aria2 && \
   apt-get -y autoremove && \
-  pecl install mcrypt-1.0.2 && \
-  docker-php-ext-enable mcrypt && \
+  #pecl install mcrypt-1.0.2 && \
+  #docker-php-ext-enable mcrypt && \
+  pecl install --nodeps mcrypt-snapshot
+  sudo bash -c "echo extension=mcrypt.so > /etc/php/7.3/conf.d/mcrypt.ini"
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 

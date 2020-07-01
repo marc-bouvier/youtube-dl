@@ -1,7 +1,7 @@
 #FROM phusion/baseimage:bionic-1.0.0
 FROM python:3.8
 MAINTAINER Nunurs
-ENV REFRESHED_AT 18-10-2019
+ENV REFRESHED_AT 01-07-2020
 
 # based on dgraziotin/lamp
 # MAINTAINER Daniel Graziotin <daniel@ineed.coffee>
@@ -22,8 +22,8 @@ RUN groupmod -g ${USER_GID} staff
 
 # Install packages
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && \
-apt-get install software-properties-common && \
+RUN apt-get -y update && \
+apt-get -y install software-properties-common && \
 add-apt-repository -y ppa:ondrej/php && \
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C && \
   apt-get -y upgrade && \

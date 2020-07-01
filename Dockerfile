@@ -38,6 +38,7 @@ RUN wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py
 RUN python3 /tmp/get-pip.py
 
 #définition des variables local pour UTF8
+RUN apt-get clean && apt-get update && apt-get install -y locales
 RUN locale-gen fr_FR.UTF-8 && export LANG=fr_FR.UTF-8 && export LC_ALL=fr_FR.UTF-8
 
 #Upgrade de PIP et installation de youtube-dl

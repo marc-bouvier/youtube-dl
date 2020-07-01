@@ -34,7 +34,8 @@ apt-get update -q && \
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
 RUN apt-get update -y && \
     apt-get install -y libmcrypt-dev && \
-    pecl install mcrypt-1.0.3 && \
+    pecl install mcrypt-1.0.2 && \
+    docker-php-ext-install mcrypt && \
     docker-php-ext-enable mcrypt
     
 #Installation de PIP

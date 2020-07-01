@@ -34,7 +34,8 @@ apt-get update -q && \
   #pecl install mcrypt-1.0.2 && \
   #docker-php-ext-enable mcrypt && \
   pecl install --nodeps mcrypt-snapshot && \
-  #sudo bash -c "echo extension=mcrypt.so > /etc/php/7.3/conf.d/mcrypt.ini" && \
+  sudo bash -c "echo extension=mcrypt.so > /etc/php/7.3/cli/conf.d/mcrypt.ini" && \
+  sudo bash -c "echo extension=mcrypt.so > /etc/php/7.3/apache2/conf.d/mcrypt.ini" && \
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 

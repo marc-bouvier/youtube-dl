@@ -3,7 +3,7 @@ include_once("../CONFIG.php");
 function navigation_links(){
   return array
   (
-    array("Nunurs","https://nunurs.eu")
+   # array("Nunurs","https://xxxxxxxx")
   );
 }
 

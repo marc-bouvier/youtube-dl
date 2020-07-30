@@ -50,7 +50,7 @@ RUN python3 /tmp/get-pip.py
 #définition des variables local pour UTF8
 RUN apt-get clean && apt-get update && apt-get install -y locales
 RUN locale-gen fr_FR.UTF-8 && export LANG=fr_FR.UTF-8 && export LC_ALL=fr_FR.UTF-8
-RUN sed -i -e 's/# fr_FR.UTF-88 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen && \
+RUN sed -i -e 's/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen && \
     locale-gen
 ENV LANG fr_FR.UTF-8 
 ENV LANGUAGE fr_FR:fr  

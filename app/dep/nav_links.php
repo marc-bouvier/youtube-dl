@@ -1,11 +1,11 @@
 <?php
 include_once("../CONFIG.php");
-function navigation_links(){
-  return array
-  (
+#function navigation_links(){
+ # return array
+ # (
    # array("Nunurs","https://xxxxxxxx")
-  );
-}
+ # );
+#}
 
 function format_navigation_link($navigation_link){
   ?>
